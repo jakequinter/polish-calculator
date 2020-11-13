@@ -7,8 +7,17 @@
 
 #include <iostream>
 
+#include "info.h"
+#include "calculator.h"
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    // info
+    info myInfo;
+    myInfo.identify("Assignment #9: Calculator");
+    
+    calculator polishCalculator;
+    polishCalculator.calculatorTest(polishCalculator);
+    
     return 0;
 }

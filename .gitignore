@@ -38,4 +38,7 @@
 *.out
 *.app
 
+# XCode project
+Calculator.xcodeproj
+
 # End of https://www.toptal.com/developers/gitignore/api/c++,
