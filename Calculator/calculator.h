@@ -29,22 +29,21 @@ typedef struct node {
     struct node *rightChild;
 } TreeNode;
 
+int evaluate(TreeNode *treeNode, int leftData, int rightData);
+int deleteNode(TreeNode *treeNode, int leftData, int rightData);
+int print(TreeNode *treeNode, int leftData, int rightData);
+
 class calculator {
 public:
-    void calculatorTest(calculator polishCalculator);
-    TreeNode *make_TreeNode(DataNode *data);
-    int scan(DataNode *data, FILE *fptr);
-    void insertTreeNode( TreeNode *newTreeNode, TreeNode **root);
-    int inOrderTraversal(TreeNode *treeNode);
-    int preOrderTraversal(TreeNode *treeNode);
-    int postOrderTraversal(TreeNode *treeNode);
-    int postOrderCalculate(TreeNode *TreeNode);
-    void postOrderDelete(TreeNode *currentTreeNode);
+    void calculate();
     
 private:
-    int evaluate(TreeNode *treeNode, int leftData, int rightData);
-    void deleteNode(TreeNode *treeNode);
-    void print(TreeNode *treeNode);
+    TreeNode *make_TreeNode(DataNode *data);
+    void insertTreeNode( TreeNode *newTreeNode, TreeNode **root);
+    int scan(DataNode *data, FILE *fptr);
+    int inOrderTraversal(TreeNode *treeNode, int (*fn)(TreeNode *, int, int));
+    int preOrderTraversal(TreeNode *treeNode, int (*fn)(TreeNode *, int, int));
+    int postOrderTraversal(TreeNode *treeNode, int (*visit)(TreeNode *, int, int));
 };
 
 #endif

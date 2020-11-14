@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
     myInfo.identify("Assignment #9: Calculator");
     
     calculator polishCalculator;
-    polishCalculator.calculatorTest(polishCalculator);
+    polishCalculator.calculate();
     
     return 0;
 }
